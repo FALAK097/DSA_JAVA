@@ -2,37 +2,40 @@
 // 153 = 1^3 + 5^3 + 3^3
 // 1634 = 1^4 + 6^4 + 3^4 + 4^4
 
+// 1. Count the number of digits in the number
+// 2. Find the sum of the power of each digit
+// 3. Compare the sum with the original number
+
 import java.util.Scanner;
 
 public class Armstrong {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int num = sc.nextInt();
-        armstrong(num);
-        sc.close();
-    }
-
-    public static void armstrong(int num) {
-        int orgNum = num;
-        int sum = 0;
-        int numOfDigits = countDigits(num);
-
-        while (num > 0) {
-            int last_digit = num % 10;
-            sum = sum + (int) Math.pow(last_digit, numOfDigits);
-            num = num / 10;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number to check if it's an Armstrong number or not :");
+        int n = s.nextInt();
+        if (ArmstrongNumber(n)) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
         }
-
-        System.out.println(sum == orgNum);
+        s.close();
     }
 
-    public static int countDigits(int n) {
+    static boolean ArmstrongNumber(int n) {
+        int originalno = n;
         int count = 0;
-        while (n > 0) {
+        int sumofpower = 0;
+        int temp = n;
+        while (temp != 0) {
             count++;
-            n = n / 10;
+            temp = temp / 10;
         }
-        return count;
+        while (n != 0) {
+            int digit = n % 10;
+            sumofpower += Math.pow(digit, count);
+            n /= 10;
+        }
+        return (sumofpower == originalno);
     }
 }

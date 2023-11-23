@@ -16,3 +16,6 @@ public class PrintNtime {
         printNtime(n - 1);
     }
 }
+
+// Time & Space Complexity -
+// Worst Case - O(n)

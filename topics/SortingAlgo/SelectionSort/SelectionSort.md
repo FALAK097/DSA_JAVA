@@ -2,8 +2,6 @@
 
 It is a sorting algorithm which selects the minimum from a given array and swaps their positions.
 
-The process continues until the entire array is sorted in ascending order.
-
 ## Algorithm
 
 1. Start from the first element of the array.
@@ -12,9 +10,7 @@ The process continues until the entire array is sorted in ascending order.
 4. Move to the next position and repeat steps 2-3.
 5. Continue this process until the array is sorted.
 
-## Complexity
-
-Analysis
+## Complexity Analysis
 
 - Time Complexity: O(n^2)
 - Space Complexity: O(1)

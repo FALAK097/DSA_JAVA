@@ -37,7 +37,7 @@ public class MergeSort {
     }
 
     public static void mergeSort(int[] arr, int low, int high) {
-        if (low >= high)
+        if (low >= high) // base case
             return;
         int mid = (low + high) / 2;
         mergeSort(arr, low, mid); // left half

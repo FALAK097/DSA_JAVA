@@ -33,3 +33,24 @@ public class BubbleSort {
         }
     }
 }
+
+// Recurison code
+// public class Solution {
+// public static void bubbleSort(int[] arr, int n) {
+// // Base case: If the array is already sorted or has only one element, return
+// if (n <= 1) {
+// return;
+// }
+
+// // One pass of bubble sort to move the largest element to the end
+// for (int i = 0; i < n - 1; i++) {
+// if (arr[i] > arr[i + 1]) {
+// // Swap arr[i] and arr[i+1]
+// arr[i + 1] = arr[i] + arr[i + 1] - (arr[i] = arr[i + 1]);
+// }
+// }
+
+// // Recursively sort the remaining (n-1) elements
+// bubbleSort(arr, n - 1);
+// }
+// }

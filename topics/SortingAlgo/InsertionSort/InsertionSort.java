@@ -28,3 +28,29 @@ public class InsertionSort {
         }
     }
 }
+
+// Recursion code
+// public class Solution {
+// public static void insertionSort(int[] arr, int size) {
+// // Base case: If the size is 1 or less, the array is already sorted
+// if (size <= 1) {
+// return;
+// }
+
+// // Sort the first (size-1) elements
+// insertionSort(arr, size - 1);
+
+// // Insert the last element into the sorted part of the array
+// int currentElement = arr[size - 1];
+// int j = size - 2;
+
+// // Move elements greater than the currentElement to the right
+// while (j >= 0 && arr[j] > currentElement) {
+// arr[j + 1] = arr[j];
+// j--;
+// }
+
+// // Insert the currentElement in its correct position
+// arr[j + 1] = currentElement;
+// }
+// }

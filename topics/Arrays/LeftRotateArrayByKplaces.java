@@ -1,3 +1,6 @@
+// Time Complexity - O(n+k)
+// Space Complexity - O(k) - Extra Space is used.
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

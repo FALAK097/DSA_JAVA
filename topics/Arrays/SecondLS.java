@@ -27,7 +27,7 @@ public class SecondLS {
                 sLargest = largest;
                 largest = arr[i];
             } else if (arr[i] < largest && arr[i] > sLargest) {
-                if (arr[i] > sLargest) {
+                {
                     sLargest = arr[i];
                 }
             }

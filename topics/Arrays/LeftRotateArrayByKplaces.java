@@ -22,6 +22,7 @@ public class LeftRotateArrayByKplaces {
         for (int i = 0; i < n; i++) {
             System.out.print(arr.get(i) + " ");
         }
+        sc.close();
     }
 
     public static ArrayList<Integer> rotateArray(ArrayList<Integer> arr, int k) {

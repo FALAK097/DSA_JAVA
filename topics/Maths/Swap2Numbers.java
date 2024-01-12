@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class Swap2Numbers {
     public static void main(String[] args) {
         Swap2Numbers obj = new Swap2Numbers();
-        obj.swapNumber();
+        obj.swapNumber(null, null);
     }
 
     // LeetCode Solution
-    public static void swapNumber(int[] a, int[] b) {
+    public void swapNumber(int[] a, int[] b) {
         a[0] = a[0] + b[0];
         b[0] = a[0] - b[0];
         a[0] = a[0] - b[0];

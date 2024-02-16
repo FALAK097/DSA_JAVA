@@ -13,11 +13,15 @@ public class SumofDivisors {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int num = sc.nextInt();
-        int ans = 0;
+        int sum = 0;
+
         for (int i = 1; i <= num; i++) {
-            ans += i * (num / i);
+            if (num % i == 0) { // Check if i is a divisor of num
+                sum += i; // Add i to the sum
+            }
         }
-        System.out.println("Sum of divisors of " + num + " is " + ans);
+
+        System.out.println("Sum of divisors of " + num + " is " + sum);
         sc.close();
     }
 }

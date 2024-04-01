@@ -1,7 +1,6 @@
 # Bubble Sort
 
 > It is a sorting algorithm which pushes the maximum number from a given array to the last by adjacent swaps.
-
 > Also known as Sinking Sort
 
 ## Algorithm

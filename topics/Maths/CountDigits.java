@@ -20,28 +20,28 @@ public class CountDigits {
         countDigits(number);
     }
 
-    public static void countDigits(int number) {
-        String numStr = Integer.toString(number);
-        int count = 0;
-
-        for (int i = 0; i < numStr.length(); i++) {
-            int digit = Character.getNumericValue(numStr.charAt(i));
-            if (digit != 0 && number % digit == 0) {
-                count++;
-            }
-        }
-
-        System.out.println(count);
-    }
-
     // public static void countDigits(int number) {
+    // String numStr = Integer.toString(number);
     // int count = 0;
 
-    // while (number > 0) {
-    // number = number / 10;
+    // for (int i = 0; i < numStr.length(); i++) {
+    // int digit = Character.getNumericValue(numStr.charAt(i));
+    // if (digit != 0 && number % digit == 0) {
     // count++;
     // }
-
-    // System.out.println("Number of digits: " + count);
     // }
+
+    // System.out.println(count);
+    // }
+
+    public static void countDigits(int number) {
+        int count = 0;
+
+        while (number > 0) {
+            number = number / 10;
+            count++;
+        }
+
+        System.out.println("Number of digits: " + count);
+    }
 }

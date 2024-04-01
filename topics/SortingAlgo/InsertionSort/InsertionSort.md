@@ -1,7 +1,6 @@
 # Insertion Sort
 
 > It is a simple comparison-based sorting algorithm which takes an element and places it in its correct position in the sorted subarray.
-
 > The algorithm works similar to the way we sort playing cards in our hands.
 
 ## Algorithm

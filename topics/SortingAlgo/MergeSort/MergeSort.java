@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class MergeSort {
@@ -45,20 +44,27 @@ public class MergeSort {
         merge(arr, low, mid, high); // merging sorted halves
     }
 
+    static int[] ms(int arr[]) {
+        mergeSort(arr, 0, arr.length - 1);
+        return arr;
+    }
+
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of the array: ");
-        int n = sc.nextInt();
-        int[] arr = new int[n]; // Initialize the array
+        int arr[] = { 1, 3, 6, 2, 5, 10, 7, 9 };
+
         System.out.println("Before sorting array: ");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-        mergeSort(arr, 0, n - 1);
+        printArr(arr);
+
+        ms(arr);
+
         System.out.println("After sorting array: ");
-        for (int i = 0; i < n; i++) {
+        printArr(arr);
+    }
+
+    static void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
-        sc.close();
+        System.out.println();
     }
 }

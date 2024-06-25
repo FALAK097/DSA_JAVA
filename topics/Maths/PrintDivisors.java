@@ -8,13 +8,6 @@ public class PrintDivisors {
         // Initialize an empty ArrayList to store the divisors
         ArrayList<Integer> divisors = new ArrayList<>();
 
-        // Iterate up to the square root of n to find divisors Calculate the square root
-        // of n
-        int sqrtN = (int) Math.sqrt(n);
-
-        // Loop from 1 to the square root of n
-
-        // for (int i = 1; i <= sqrtN; ++i) {
         for (int i = 1; i * i <= n; i++) {
             // Check if i divides n without leaving a remainder
             if (n % i == 0) {

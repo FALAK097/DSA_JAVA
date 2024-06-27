@@ -3,8 +3,13 @@ public class PowerOfFour {
         if (num <= 0)
             return false;
 
-        double power = Math.log(num) / Math.log(4);
-        return Math.pow(4, (int) power) == num;
+        while (num > 1) {
+            if (num % 4 != 0) {
+                return false;
+            }
+            num /= 4;
+        }
+        return true;
     }
 
     public static void main(String[] args) {

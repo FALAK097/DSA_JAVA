@@ -17,40 +17,24 @@ public class PrimeNumber {
 
     // Approach - 02 Optimized
     static boolean checkPrime(int n) {
-
-        // Initialize a counter variable to count the number of factors.
         int cnt = 0;
 
-        // Loop through numbers from 1 to the square root of n.
-        for (int i = 1; i <= Math.sqrt(n); i++) {
-
-            // If n is divisible by i without any remainder.
+        for (int i = 1; i * i <= n; i++) {
             if (n % i == 0) {
-
-                // Increment the counter.
                 cnt = cnt + 1;
-
                 // If n is not a perfect square, count its reciprocal factor.
-                if (n / i != i) {
+                if (i != n / i) {
                     cnt = cnt + 1;
                 }
             }
         }
-
-        // If the number of factors is exactly 2.
-        if (cnt == 2) {
-            // Return true, indicating that the number is prime.
+        if (cnt == 2)
             return true;
-        }
-        // If the number of factors is not 2.
-        else {
-            // Return false, indicating that the number is not prime.
-            return false;
-        }
+        return false;
     }
 
     public static void main(String[] args) {
-        int n = 1483;
+        int n = 7;
         boolean isPrime = checkPrime(n);
         if (isPrime) {
             System.out.println(" " + n + " is a prime number.");
